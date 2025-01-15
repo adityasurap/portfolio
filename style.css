@@ -41,3 +41,19 @@ nav ul {
 nav li {
   display: contents;
 }
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+form button {
+  grid-column: 1 / -1;
+}
