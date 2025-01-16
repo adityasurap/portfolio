@@ -82,3 +82,82 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrapping: balance;
 }
+
+section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+section > h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: oklch(65% 50% 0);
+}
+
+section > p a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+section > p a:hover {
+  text-decoration: underline;
+}
+
+section article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+section article header h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+section article header time {
+  font-size: 0.9rem;
+  color: oklch(60% 10% 200);
+}
+
+ul {
+  margin: 1rem 0;
+  padding: 0;
+  list-style-type: disc;
+  margin-inline-start: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul li strong {
+  color: var(--color-accent);
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
