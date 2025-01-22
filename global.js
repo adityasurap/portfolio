@@ -2,9 +2,9 @@ console.log('IT’S ALIVE!');
 
 let pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
-  { url: 'contact/', title: 'Contact' },
-  { url: 'resume/', title: 'Resume' },
+  { url: 'portfolio/projects/', title: 'Projects' },
+  { url: 'portfolio/contact/', title: 'Contact' },
+  { url: 'portfolio/resume/', title: 'Resume' },
   { url: 'https://github.com/adityasurap', title: 'Profile'}
 ];
 
