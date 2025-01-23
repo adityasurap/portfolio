@@ -1,2 +1,2 @@
 # portfolio
- Repository for Lab 1 in DSC 106.
+ Repository for labs in DSC 106.
