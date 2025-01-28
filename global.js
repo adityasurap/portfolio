@@ -91,3 +91,55 @@ form?.addEventListener('submit', function (event) {
 
   location.href = url;
 });
+
+export async function fetchJSON(url) {
+  try {
+      const response = await fetch(url);
+
+      console.log(response);
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!(containerElement instanceof HTMLElement)) {
+    throw new Error('containerElement must be a valid DOM element');
+  }
+  
+  const validHeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  
+  if (!validHeadingLevels.includes(headingLevel)) {
+    throw new Error('Invalid heading level. Must be one of: h1, h2, h3, h4, h5, h6.');
+  }
+  
+  containerElement.innerHTML = '';
+
+  if (projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects available at the moment.</p>';
+    return;
+  }
+
+  for (const project of projects) {
+    const article = document.createElement('article');
+
+    const heading = document.createElement(headingLevel);
+    heading.textContent = project.title;
+
+    article.innerHTML = `
+      <h3>${project.title}</h3>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+
+    containerElement.appendChild(article);
+  }
+}
