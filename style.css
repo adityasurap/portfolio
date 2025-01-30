@@ -204,3 +204,10 @@ img {
 #profile-stats dd {
   grid-column: span 1;
 }
+
+.project-year {
+  font-weight: normal;
+  color: gray;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
