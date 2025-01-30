@@ -211,3 +211,12 @@ img {
   font-size: 0.9rem;
   margin-left: 5px;
 }
+
+.projects img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
