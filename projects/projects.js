@@ -1,5 +1,4 @@
 import { fetchJSON, renderProjects } from '../global.js';
-import * as d3 from 'd3';
 
 const projects = await fetchJSON('/portfolio/lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
