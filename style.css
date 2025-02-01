@@ -211,11 +211,3 @@ img {
   font-size: 0.9rem;
   margin-left: 5px;
 }
-
-svg {
-  max-width: 20em;
-  margin-block: 2em;
-
-  /* Do not clip shapes outside the viewBox. */
-  overflow: visible;
-}

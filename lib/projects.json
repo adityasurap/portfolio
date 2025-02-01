@@ -2,73 +2,73 @@
     {
         "title": "If you hate the rain, should you move to San Diego?",
         "year": "2025",
-        "image": "../images/lab_4_proj_img_rain.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_rain.jpeg",
         "description": "This visualization aims to demonstrate how San Diego sees the least precipitation when compared to other major U.S. cities."
     },
     {
         "title": "What does the sleeping/estrus pattern for mice look like?",
         "year": "2025",
-        "image": "../images/lab_4_proj_img_mice.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_mice.jpeg",
         "description": "These visualizations aim to communicate the sleeping/estrus patterns for mice. But, be careful! One visualization is deceptive. Can you figure out which one it is?"
     },
     {
         "title": "Improving the Get It Done App - A Comprehensive Customer Experience Analysis",
         "year": "2025",
-        "image": "../images/lab_4_proj_img_cx.png",
+        "image": "/portfolio/images/lab_4_proj_img_cx.png",
         "description": "This project focuses on analyzing trends in customer feedback data from a variety of services provided by the City of San Diego to derive insights into what factors lead to positive and negative customer experiences."
     },
     {
         "title": "The Data Science Life Cycle - A League of Legends Project",
         "year": "2024",
-        "image": "../images/lab_4_proj_img_lol.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_lol.jpeg",
         "description": "This League of Legends project involved stepping through the various stages of the Data Science Life Cycle; the steps included exploratory data analysis, data cleaning, assessment for missingness, hypothesis testing, the creation of a baseline model and an improved final model, and a fairness analysis for the model. The overall goal of the project was to determine whether either one of the sides in League of Legends (red side and blue side) has a significant advantage over the other side."
     },
     {
         "title": "Understanding the Impact on the Lebanese Population from the 2020 Beirut Blast",
         "year": "2024",
-        "image": "../images/lab_4_proj_img_bl.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_bl.jpeg",
         "description": "This project aims to utilize various NLP-based machine learning models to understand the change in the physical, behavioral, and mental effects of the 2020 Beirut Blast on the Lebanese population."
     },
     {
         "title": "A Taylor Swift Song Recommender & Lyric Searcher",
         "year": "2023",
-        "image": "../images/lab_4_proj_img_ts.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_ts.jpeg",
         "description": "This project involved the use of NumPy, Pandas, and mathematical techniques to develop a comprehensive Taylor Swift Song Recommender/Lyric Searcher."
     },
     {
         "title": "California Home Price Predictor - A Machine Learning Project",
         "year": "2023",
-        "image": "../images/lab_4_proj_img_chpp.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_chpp.jpeg",
         "description": "This project involved developing a machine learning model using NumPy, Pandas, and Scikit-Learn to predict the price of a California home based on various features like location, resident's age, resident's income, and number of rooms."
     },
     {
         "title": "Which car should you buy?",
         "year": "2022",
-        "image": "../images/lab_4_proj_img_car.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_car.jpeg",
         "description": "In this project, users are able to input certain criteria they're looking for in a vehicle, and get a good recommendation based on the inputs provided."
     },
     {
         "title": "Predicting the 2020 U.S. Presidential Election Results",
         "year": "2021",
-        "image": "../images/lab_4_proj_img_elec.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_elec.jpeg",
         "description": "This project aims to utilize various machine learning models on a comprehensive politics dataset to predict the outcome of the 2020 U.S. Presidential Election."
     },
     {
         "title": "Is it a cat or a dog?",
         "year": "2020",
-        "image": "../images/lab_4_proj_img_cvd.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_cvd.jpeg",
         "description": "A kNN classification model is utilized to predict whether the object in front of a camera is a cat or a dog."
     },
     {
         "title": "Personal Calendar/Task Scheduler",
         "year": "2018",
-        "image": "../images/lab_4_proj_img_cale.png",
+        "image": "/portfolio/images/lab_4_proj_img_cale.png",
         "description": "This application lets you keep track of your work! Schedule meetings with other people, set due dates, assign tasks, and much more!"
     },
     {
         "title": "A Basic Calculator",
         "year": "2016",
-        "image": "../images/lab_4_proj_img_calc.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_calc.jpeg",
         "description": "Don't know how to math? Don't worry! Just use this handy calculator!"
     }
 ]

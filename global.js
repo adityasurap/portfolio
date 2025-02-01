@@ -2,23 +2,24 @@ console.log('IT’S ALIVE!');
 
 let pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/index.html', title: 'Projects' },
-  { url: 'contact/index.html', title: 'Contact' },
-  { url: 'resume/index.html', title: 'Resume' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'contact/', title: 'Contact' },
+  { url: 'resume/', title: 'Resume' },
   { url: 'https://github.com/adityasurap', title: 'Profile'}
 ];
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
+const ARE_WE_HOME = document.documentElement.classList.contains('home');
+const BASE_PATH = '/portfolio';
+
 for (let p of pages) {
   let url = p.url;
   let title = p.title;
 
-  const ARE_WE_HOME = document.documentElement.classList.contains('home');
-
   if (!ARE_WE_HOME && !url.startsWith('http')) {
-    url = '../' + url;
+    url = BASE_PATH + '/' + url;
   }
   let a = document.createElement('a');
   a.href = url;
