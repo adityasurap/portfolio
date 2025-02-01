@@ -1,7 +1,7 @@
 import { fetchJSON, renderProjects } from '../global.js';
 import * as d3 from 'd3';
 
-const projects = await fetchJSON('/portfolio/lib/projects.json');
+const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 const projectsTitle = document.querySelector('.projects-title');
 
@@ -16,4 +16,4 @@ let arc = arcGenerator({
     endAngle: 2 * Math.PI,
   });
 
-  d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
+d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
