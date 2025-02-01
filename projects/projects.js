@@ -1,5 +1,4 @@
 import { fetchJSON, renderProjects } from '../global.js';
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const projects = await fetchJSON('/portfolio/lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
@@ -20,9 +19,9 @@ let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 let arcs = arcData.map((d) => arcGenerator(d));
 
-arcs.forEach((arc, idx) => {
+arcs.forEach((arc, index) => {
     d3.select('svg')
       .append('path')
       .attr('d', arc)
-      .attr('fill', colors[idx]);
+      .attr('fill', colors(index));
 });
