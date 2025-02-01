@@ -20,7 +20,7 @@
     {
         "title": "The Data Science Life Cycle - A League of Legends Project",
         "year": "2024",
-        "image": "/portfolio/images/lab_4_proj_img_lol.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_lol.jpg",
         "description": "This League of Legends project involved stepping through the various stages of the Data Science Life Cycle; the steps included exploratory data analysis, data cleaning, assessment for missingness, hypothesis testing, the creation of a baseline model and an improved final model, and a fairness analysis for the model. The overall goal of the project was to determine whether either one of the sides in League of Legends (red side and blue side) has a significant advantage over the other side."
     },
     {
@@ -32,7 +32,7 @@
     {
         "title": "A Taylor Swift Song Recommender & Lyric Searcher",
         "year": "2023",
-        "image": "/portfolio/images/lab_4_proj_img_ts.jpeg",
+        "image": "/portfolio/images/lab_4_proj_img_ts.jpg",
         "description": "This project involved the use of NumPy, Pandas, and mathematical techniques to develop a comprehensive Taylor Swift Song Recommender/Lyric Searcher."
     },
     {
