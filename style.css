@@ -248,3 +248,18 @@ svg {
   border-radius: 4px;
   border: 1px solid #333;
 }
+
+@media (prefers-color-scheme: dark) {
+  .legend {
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+  }
+
+  .legend li {
+      color: #ddd;
+  }
+
+  .legend .swatch {
+      border: 1px solid #fff;
+  }
+}
