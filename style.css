@@ -228,7 +228,8 @@ svg {
   margin: 1rem 0;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: var(--color-accent);
+  background-color: #fff;
+  color: #333;
 }
 
 .legend li {
@@ -247,4 +248,16 @@ svg {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .legend {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
+
+  .legend .swatch {
+    border: 1px solid #ccc;
+  }
 }
