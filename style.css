@@ -218,6 +218,8 @@ svg {
 
   /* Do not clip shapes outside the viewBox. */
   overflow: visible;
+
+  flex: 1;
 }
 
 .legend {
@@ -230,6 +232,7 @@ svg {
   border-radius: 8px;
   background-color: #fff;
   color: #333;
+  flex: 1;
 }
 
 .legend li {
@@ -248,4 +251,10 @@ svg {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #333;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
