@@ -253,13 +253,16 @@ svg {
   .legend {
       background-color: #1e1e1e;
       border: 1px solid #444;
+      padding: 0.5em;
+      border-radius: 8px;
   }
 
   .legend li {
-      color: #ddd;
+      color: #f0f0f0;
+      font-weight: 500;
   }
 
   .legend .swatch {
-      border: 1px solid #fff;
+      border: 1px solid #ccc;
   }
 }
