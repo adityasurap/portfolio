@@ -14,7 +14,16 @@
     </h1>
 
     <svg viewBox="-50 -50 100 100"></svg>
-    <ul class="legend"></ul>
+    <ul class="legend">
+        <li style="--color: { colors(index) }">
+          <span class="swatch"></span>
+          {data[i].label} <em>({data[i].value})</em>
+        </li>
+        <li>
+          ...
+        </li>
+        ...
+    </ul>
     
     <div class="projects"></div>
 </body>
