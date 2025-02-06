@@ -265,8 +265,10 @@ svg {
   font-size: 1rem;
 }
 
-svg:has(path:hover) path:not(:hover) {
-  opacity: 0.5;
+&:has(path:hover) {
+  path:not(:hover) {
+      opacity: 0.2;
+  }
 }
 
 path {
