@@ -9,6 +9,8 @@ projectsTitle.textContent = `${projects.length} Projects`;
 
 renderProjects(projects, projectsContainer, 'h2');
 
+let selectedIndex = -1;
+
 function renderPieChart(projectsGiven) {
   let newRolledData = d3.rollups(
     projectsGiven,
@@ -36,7 +38,25 @@ function renderPieChart(projectsGiven) {
   newArcs.forEach((arc, index) => {
     newSVG.append('path')
       .attr('d', arc)
-      .attr('fill', colors(index));
+      .attr('fill', colors(index))
+      .on('click', () => {
+        selectedIndex = selectedIndex === index ? -1 : index;
+
+        newSVG
+          .selectAll('path')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        legend
+          .selectAll('li')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        if (selectedIndex === -1) {
+          renderProjects(projectsGiven, projectsContainer, 'h2');
+        } else {
+          let filteredProjects = projectsGiven.filter(project => project.year === newData[selectedIndex].label);
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
+      });
   });
 
   newData.forEach((d, idx) => {
@@ -62,3 +82,4 @@ searchInput.addEventListener('input', (event) => {
   renderProjects(filteredProjects, projectsContainer, 'h2');
   renderPieChart(filteredProjects);
 });
+
