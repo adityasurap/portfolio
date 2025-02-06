@@ -273,4 +273,5 @@ svg {
 
 path {
   transition: 300ms;
+  cursor: pointer;
 }
