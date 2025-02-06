@@ -277,7 +277,7 @@ path {
 }
 
 .selected {
-  --color: oklch(60% 45% 0) !important;
+  --color: #000000 !important;
 
   &:is(path) {
     fill: var(--color);
