@@ -51,20 +51,20 @@ function displayStats() {
     dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
     dl.append('dd').text(data.length);
   
-    dl.append('dt').text('Total commits');
+    dl.append('dt').text('Total Commits');
     dl.append('dd').text(commits.length);
 
     const numFiles = d3.group(data, d => d.file).size;
-    dl.append('dt').text('Number of files');
+    dl.append('dt').text('Number of Files');
     dl.append('dd').text(numFiles);
 
     const longestFile = d3.rollups(data, v => d3.max(v, d => d.line), d => d.file);
     const maxFile = d3.max(longestFile, d => d[1]);
-    dl.append('dt').text('Longest file');
+    dl.append('dt').text('Longest File');
     dl.append('dd').text(maxFile);
 
     const longestLine = d3.max(data, d => d.length);
-    dl.append('dt').text('Longest line length');
+    dl.append('dt').text('Longest Line Length');
     dl.append('dd').text(longestLine);
 
     const workByPeriod = d3.rollups(
@@ -79,7 +79,7 @@ function displayStats() {
         }
       );
       const maxPeriod = d3.greatest(workByPeriod, d => d[1])?.[0];
-      dl.append('dt').text('Most work done in');
+      dl.append('dt').text('Most Work Done In');
       dl.append('dd').text(maxPeriod);
 }
 
