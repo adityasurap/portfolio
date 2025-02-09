@@ -283,3 +283,25 @@ path {
     fill: var(--color);
   }
 }
+
+.stats {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.stats dt {
+  font-weight: bold;
+  color: #333;
+}
+
+.stats dd {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.stats abbr {
+  border-bottom: 1px dotted #333;
+}
