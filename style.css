@@ -306,3 +306,9 @@ path {
 #stats dd {
   grid-column: span 1;
 }
+
+.gridlines line {
+  stroke: #ccc;
+  stroke-opacity: 0.5;
+  stroke-width: 1;
+}

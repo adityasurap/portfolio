@@ -106,17 +106,30 @@ function createScatterplot() {
     height: height - margin.top - margin.bottom,
   };
 
+  xScale.domain(d3.extent(commits, (d) => d.datetime)).nice();
+  yScale.domain([0, 24]);
+
   xScale.range([usableArea.left, usableArea.right]);
   yScale.range([usableArea.bottom, usableArea.top]);
 
   const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisLeft(yScale);
+  
+  const yAxis = d3
+    .axisLeft(yScale)
+    .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
 
   const svg = d3
     .select('#chart')
     .append('svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('overflow', 'visible');
+
+  const gridlines = svg
+    .append('g')
+    .attr('class', 'gridlines')
+    .attr('transform', `translate(${usableArea.left}, 0)`);
+  
+  gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 
   svg
     .append('g')
@@ -139,6 +152,3 @@ function createScatterplot() {
     .attr('r', 5)
     .attr('fill', 'steelblue');
 }
-
-console.log(xScale.domain(), xScale.range());
-console.log(yScale.domain(), yScale.range());
