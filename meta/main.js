@@ -148,11 +148,58 @@ function createScatterplot() {
   const dots = svg.append('g').attr('class', 'dots');
 
   dots
-    .selectAll('circle')
-    .data(commits)
-    .join('circle')
-    .attr('cx', (d) => xScale(d.datetime))
-    .attr('cy', (d) => yScale(d.hourFrac))
-    .attr('r', 5)
-    .attr('fill', 'steelblue');
+  .selectAll('circle')
+  .data(commits)
+  .join('circle')
+  .attr('cx', (d) => xScale(d.datetime))
+  .attr('cy', (d) => yScale(d.hourFrac))
+  .attr('r', 5)
+  .attr('fill', 'steelblue')
+  .on('mouseenter', (event, commit) => {
+    updateTooltipContent(commit);
+    updateTooltipVisibility(true);
+    updateTooltipPosition(event);
+  })
+  .on('mouseleave', () => {
+    updateTooltipContent({});
+    updateTooltipVisibility(false);
+  });
+}
+
+function updateTooltipContent(commit) {
+  const link = document.getElementById('commit-link');
+  const date = document.getElementById('commit-date');
+  const time = document.getElementById('commit-time');
+  const author = document.getElementById('commit-author');
+  const linesEdited = document.getElementById('commit-lines');
+
+  if (!commit) {
+    link.href = '#';
+    link.textContent = 'Hover over a commit to see details.';
+    date.textContent = '';
+    time.textContent = '';
+    author.textContent = '';
+    linesEdited.textContent = '';
+    tooltip.hidden = true;
+    return;
+  }
+
+  link.href = commit.url;
+  link.textContent = commit.id;
+  date.textContent = commit.datetime?.toLocaleString('en', { dateStyle: 'full' });
+  time.textContent = commit.datetime?.toLocaleTimeString('en', { timeStyle: 'short' });
+  author.textContent = commit.author;
+  linesEdited.textContent = commit.totalLines;
+}
+
+
+function updateTooltipVisibility(isVisible) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.hidden = !isVisible;
+}
+
+function updateTooltipPosition(event) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.style.left = `${event.clientX + 10}px`;
+  tooltip.style.top = `${event.clientY + 10}px`;
 }
