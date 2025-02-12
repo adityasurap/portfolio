@@ -390,3 +390,27 @@ circle.selected {
 circle.selected {
   fill: #ff6b6b;
 }
+
+#language-breakdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+}
+
+#language-breakdown dl {
+  display: contents;
+}
+
+#language-breakdown dt {
+  grid-column: span 1;
+  font-weight: bold;
+}
+
+#language-breakdown dd {
+  grid-column: span 1;
+  text-align: right;
+}
