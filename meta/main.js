@@ -218,8 +218,21 @@ function updateTooltipPosition(event) {
 
 function brushSelector() {
   const svg = document.querySelector('svg');
-  d3.select(svg).call(d3.brush());
-  d3.select(svg).call(d3.brush().on('start brush end', brushed));
+
+  const brush = d3.brush()
+      .on('start', () => console.log('Brush start'))
+      .on('brush', (event) => console.log('Brushing', event.selection))
+      .on('end', (event) => {
+          if (!event.selection) return;
+          const [[x0, y0], [x1, y1]] = event.selection;
+          console.log('Brushed area:', x0, y0, x1, y1);
+      });
+
+  d3.select(svg)
+      .append('g')
+      .attr('class', 'brush')
+      .call(d3.brush().on('start brush end', brushed))
+      .lower();
 }
 
 let brushSelection = null;
