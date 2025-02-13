@@ -414,3 +414,8 @@ circle.selected {
   grid-column: span 1;
   text-align: right;
 }
+
+svg {
+  width: 100%;
+  max-width: none;
+}
