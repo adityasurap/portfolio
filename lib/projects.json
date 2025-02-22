@@ -1,5 +1,11 @@
 [
     {
+        "title": "Geo Cycle",
+        "year": "2025",
+        "image": "/portfolio/images/lab_7_geo_cycle.png",
+        "description": "This is an immersive, interactive map visualization of bike traffic in the Boston/Cambridge area during different times of the day."
+    },
+    {
         "title": "If you hate the rain, should you move to San Diego?",
         "year": "2025",
         "image": "/portfolio/images/lab_4_proj_img_rain.jpeg",
@@ -64,11 +70,5 @@
         "year": "2018",
         "image": "/portfolio/images/lab_4_proj_img_cale.png",
         "description": "This application lets you keep track of your work! Schedule meetings with other people, set due dates, assign tasks, and much more!"
-    },
-    {
-        "title": "A Basic Calculator",
-        "year": "2016",
-        "image": "/portfolio/images/lab_4_proj_img_calc.jpeg",
-        "description": "Don't know how to math? Don't worry! Just use this handy calculator!"
     }
 ]
